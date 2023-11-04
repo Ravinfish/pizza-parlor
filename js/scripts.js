@@ -35,24 +35,19 @@ Pizza.prototype.baseCost = function () {
   return totalPrice.toFixed(2);
   };
 
-  // const zaToppings = {
-  //   pepperoni: "Pepperoni",
-  //   canadianBacon: "Canadian Bacon",
-  //   chicken: "Chicken",
-  //   bacon: "Bacon",
-  //   redOnion: "Red Onion",
-  //   pineapple: "Pineapple",
-  //   artichoke: "Artichoke Hearths",
-  //   spinach: "Spinach",
-  //   mushrooms: "Mushrooms",
-  // };
-  // const sauce = {
-  //   redSauce: "Red Sauce",
-  //   whiteSauce: "White Sauce",
-  //   garlicOil: "Garlic and Olive Oil"
-  // };
+// UI Logic
 
-  // const zaSize = this.size;
-  // const zaSauce = this.sauce;
+function handleFormSubmission(e) {
+  e.preventDefault();
+  const zaSize = document.querySelector("input[name=size]:checked").value;
+  const toppingsSelected = Array.from(document.querySelectorAll("form#checkbox-form input[name=toppings]:checked")).map(input => input.value);
+
+  const order = new Pizza(sizeSelector, toppingsSelected);
+  order.size;
+
+  const sizeOutput = document.getElementById("sizeInfo");
+  const toppingOutput = document.getElementById("toppingInfo";
+  )
+}
 
 
