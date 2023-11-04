@@ -1,8 +1,9 @@
 // Business Logic
 
-function Pizza(toppings, size) {
+function Pizza(toppings, size, sauce) {
   this.toppings = toppings;
   this.size = size;
+  this.sauce = sauce;
 };
 
 Pizza.prototype.addToppings = function (topping) {
@@ -16,20 +17,21 @@ Pizza.prototype.addToppings = function (topping) {
 Pizza.prototype.baseCost = function () {
   let basePrice;
   if (this.size === "personal") {
-    basePrice = 5;
+    basePrice = 15;
   } else if (this.size === "medium") {
-    basePrice = 8;
+    basePrice = 25;
   } else if (this.size === "large") {
-    basePrice = 10;
+    basePrice = 30;
   } else if (this.size === "extra large") {
-    basePrice = 12;
+    basePrice = 35;
   } else {
     return 0;
   }
 
-  const toppingPrice = 1.5;
+  const toppingPrice = 5;
+  const saucePrice = 5;
   const toppingCount = this.toppings.length;
-  const totalPrice = basePrice + (toppingPrice * toppingCount);
+  const totalPrice = basePrice + saucePrice + (toppingPrice * toppingCount);
   return totalPrice.toFixed(2);
   };
 
