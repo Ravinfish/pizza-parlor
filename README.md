@@ -9,12 +9,12 @@ Expected Output: Pizza { toppings: ["peperoni","bacon","onion"], size: "medium"}
 Describe: Pizza.prototype.cost()
 
 Test: "It should take a pizza object and return the base cost based on size"
-Code:
-Expected Output:
+Code: newPizza.cost()
+Expected Output:8
 
 Test: "It should take a pizza object and add additional cost based on toppings chosen"
-Code:
-Expected Output:
+Code: newPizza.cost()
+Expected Output: 11
 
 Test: 
 Code:
