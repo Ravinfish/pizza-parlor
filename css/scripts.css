@@ -1,3 +1,47 @@
 .hidden {
   display: none;
 }
+
+.img {
+  height: 40%;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pizzaSize {
+  text-align: center;
+}
+
+.pizzaToppings {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 30px;
+}
+
+.button {
+  margin-top: 2%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(154, 103, 103);
+  border: rgb(105, 18, 8);
+  border-width: 5px;
+  border-radius: 50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  font-size: 23px;
+}
+.header2 {
+
+}
+
+body {
+
+}

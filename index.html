@@ -8,11 +8,13 @@
   <title>ZA so Fancy!</title>
 </head>
 <body>
+  <div class="intro">
   <h1>Hello and welcome to ZA so Fancy!</h1>
+  <img class="img" src="img/pizza-3007395_1280.jpg" alt="fancy pizza">
   <h2>Here we are dedicated to making pizza aka ZA so fancy you won't want to eat it!</h2>
-
+</div>
   <div class="pizzaSize">
-    <h3>What size of ZA would you like?</h3>
+    <h3 class="header2">What size of ZA would you like?</h3>
     <form id="radio-form">
       <label>
         <input type="radio" value="personal" name="size" checked>Personal</label>
@@ -24,7 +26,7 @@
         <input type="radio" value="extra large" name="size">Extra Large</label><br>
      
 
-     <h3>Give it some sause!</h3>
+     <h3 class="header2">Give it some sauce!</h3>
      
       <label>
       <input type="radio" value="red" name="sauce">Signature Red Sauce</label>
@@ -38,7 +40,7 @@
      </form>
 
 
-     <h3>Now, let's get this ZA <em>elevated</em> and choose some toppings:</h3>
+     <h3 class="header2">Now, let's get this ZA <em>elevated</em> and choose some toppings:</h3>
      <div class="pizzaToppings">
      <form id="checkbox-form">
       <input type="checkbox" id="chicken" name="toppings" value="chicken">
@@ -74,8 +76,8 @@
     </div>
 
     <div id="pizzaPrice" class="hidden">
-      <h2>For a  <span id="sizeInfo"></span> with our <span id="sauceInfo"></span> and <span id="toppingInfo"></span> topping</h2>
-      <h2>Your total is: $<span class="total"></span></h2>
+      <h2 class="header2">For a  <span id="sizeInfo"></span> with our <span id="sauceInfo"></span> and <span id="toppingInfo"></span> topping</h2>
+      <h2 class="header2">Your total is: $<span class="total"></span></h2>
     </div>
   
 </body>
