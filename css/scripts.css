@@ -12,19 +12,25 @@
   text-align: center;
   margin-top: 5%;
   margin-bottom: 3%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  color: whitesmoke
 }
 
 .pizzaSize {
   text-align: center;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: whitesmoke;
 }
 
 .pizzaToppings {
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 2%;
   margin-bottom: 2%;
-  font-size: 30px;
+  font-size: 15px;
+  color: whitesmoke;
 }
 
 .button {
@@ -34,14 +40,17 @@
   border: rgb(105, 18, 8);
   border-width: 5px;
   border-radius: 50%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px;
   font-size: 23px;
 }
 .header2 {
-
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: whitesmoke
 }
 
 body {
+  background-image: url('/img/brick\ background.jpg');
 
 }
