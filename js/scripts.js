@@ -6,13 +6,6 @@ function Pizza(toppings, size, sauce) {
   this.sauce = sauce;
 };
 
-Pizza.prototype.addToppings = function (topping) {
-  this.toppings = topping.value;
-  if (!Array.isArray(this.toppings)) {
-    this.toppings = [];
-  }
-  this.toppings.push(topping);
-};
 
 Pizza.prototype.baseCost = function () {
   let basePrice;
@@ -32,7 +25,7 @@ Pizza.prototype.baseCost = function () {
   const saucePrice = 5;
   const toppingCount = this.toppings.length;
   const totalPrice = basePrice + saucePrice + (toppingPrice * toppingCount);
-  return totalPrice.toFixed(2);
+  return parseFloat(totalPrice).toFixed(2);
 };
 
 // UI Logic
@@ -41,24 +34,24 @@ function handleFormSubmission(e) {
   e.preventDefault();
   const zaSize = document.querySelector("input[name=size]:checked").value;
   const toppingsSelected = Array.from(document.querySelectorAll("form#checkbox-form input[name=toppings]:checked")).map(input => input.value);
+  const sauceSelected = document.querySelector("input[name=sauce]:checked").value;
 
-  const pizza = new Pizza(sizeSelector, sauceSelected, toppingsSelected);
-  pizza.size;
+  const pizza = new Pizza(toppingsSelected, zaSize, sauceSelected);
 
   const sizeOutput = document.getElementById("sizeInfo");
   const sauceOutput = document.getElementById("sauceInfo");
   const toppingOutput = document.getElementById("toppingInfo");
 
-  sizeOutput.textContent = '${pizza.size} pizza ';
-  sauceOutput.textContent = '{pizza.sauce} sauce ';
+  sizeOutput.textContent = `${pizza.size} pizza`;
+  sauceOutput.textContent = `${pizza.sauce} sauce`;
   toppingOutput.textContent = pizza.toppings.join(", ");
 
   let outputBox = document.getElementById("pizzaPrice");
   outputBox.classList.remove("hidden");
-  let totalPrice = pizza.baseCost(pizza.size, pizza.sauce, pizza.toppings);
+  let totalPrice = pizza.baseCost();
   let totalSpan = document.querySelector(".total");
   totalSpan.textContent = totalPrice;
-};
+}
 
 window.addEventListener("load", function () {
   const button = document.getElementById("addPizza");
@@ -68,5 +61,7 @@ window.addEventListener("load", function () {
     e.preventDefault();
   });
 });
+
+
 
 
