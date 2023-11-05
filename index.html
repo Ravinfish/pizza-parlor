@@ -13,7 +13,7 @@
 
   <div class="pizzaSize">
     <h3>What size of ZA would you like?</h3>
-    <form>
+    <form id="radio-form">
       <label>
         <input type="radio" value="personal" name="size" checked>Personal</label>
       <label>
@@ -21,11 +21,11 @@
      <label>
         <input type="radio" value="large" name="size">Large</label>
        <label>
-        <input type="radio" value="extra large" name="size">Extra Large</label>
-     </form>
+        <input type="radio" value="extra large" name="size">Extra Large</label><br>
+     
 
      <h3>Give it some sause!</h3>
-     <form>
+     
       <label>
       <input type="radio" value="red" name="sauce">Signature Red Sauce</label>
       <label>
@@ -67,14 +67,14 @@
       <label for="lamb">Lamb Steak</label>
       <input type="checkbox" id="onion" name="toppinngs" value="onion">
       <label for="onion">Carmalized Onion</label>
-      <br />
+      <br>
       <button type="button" class="button" id="addPizza">Add ZA to order</button>
      </form>
     </div>
     </div>
 
     <div id="pizzaPrice" class="hidden">
-      <h2>For a  <span id="sizeInfo"></span> with <span id="toppingInfo"> toppings</span></h2>
+      <h2>For a  <span id="sizeInfo"></span> with <span id="sauceInfo"></span> and <span id="toppingInfo"> toppings</span></h2>
       <h2>Your total is: $<span class="total"></span></h2>
     </div>
   

@@ -33,7 +33,7 @@ Pizza.prototype.baseCost = function () {
   const toppingCount = this.toppings.length;
   const totalPrice = basePrice + saucePrice + (toppingPrice * toppingCount);
   return totalPrice.toFixed(2);
-  };
+};
 
 // UI Logic
 
@@ -42,12 +42,31 @@ function handleFormSubmission(e) {
   const zaSize = document.querySelector("input[name=size]:checked").value;
   const toppingsSelected = Array.from(document.querySelectorAll("form#checkbox-form input[name=toppings]:checked")).map(input => input.value);
 
-  const order = new Pizza(sizeSelector, toppingsSelected);
-  order.size;
+  const pizza = new Pizza(sizeSelector, sauceSelected, toppingsSelected);
+  pizza.size;
 
   const sizeOutput = document.getElementById("sizeInfo");
-  const toppingOutput = document.getElementById("toppingInfo";
-  )
-}
+  const sauceOutput = document.getElementById("sauceInfo");
+  const toppingOutput = document.getElementById("toppingInfo");
+
+  sizeOutput.textContent = '${pizza.size} pizza ';
+  sauceOutput.textContent = '{pizza.sauce} sauce ';
+  toppingOutput.textContent = pizza.toppings.join(", ");
+
+  let outputBox = document.getElementById("pizzaPrice");
+  outputBox.classList.remove("hidden");
+  let totalPrice = pizza.baseCost(pizza.size, pizza.sauce, pizza.toppings);
+  let totalSpan = document.querySelector(".total");
+  totalSpan.textContent = totalPrice;
+};
+
+window.addEventListener("load", function () {
+  const button = document.getElementById("addPizza");
+  button.addEventListener("click", handleFormSubmission);
+  const form = document.getElementById("radio-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+});
 
 
